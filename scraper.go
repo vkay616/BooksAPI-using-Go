@@ -42,8 +42,11 @@ func scrape() {
 	c.Visit("https://www.bookswagon.com/promo-best-seller/best-seller/03AC998EBDC2")
 
 	// fmt.Println(books)
+	createJSON(books)
+}
 
-	content, err := json.Marshal(books)
+func createJSON(b []book) {
+	content, err := json.Marshal(b)
 
 	if err != nil {
 		fmt.Println(err.Error())
