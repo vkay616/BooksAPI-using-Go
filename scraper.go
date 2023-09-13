@@ -15,7 +15,7 @@ type book struct {
 	Price  string `json:"price"`
 }
 
-func main() {
+func scrape() {
 	c := colly.NewCollector()
 
 	i := 1
